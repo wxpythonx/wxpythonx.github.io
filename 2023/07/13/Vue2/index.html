@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="操作系统Windows11&gt;Node.js版本14.21.3&gt;NPM版本6.14.18 Windows推荐使用nvm - node version manager（node版本管理工具）。 12345C:\Users\user&gt;node -vv14.21.3C:\Users\user&gt;npm -v6.14.18  Quick Start Vue2项目搭建打开终端（Micro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue2学习进阶之路">
+<meta property="og:url" content="http://example.com/2023/07/13/Vue2/index.html">
+<meta property="og:site_name" content="wxy">
+<meta property="og:description" content="操作系统Windows11&gt;Node.js版本14.21.3&gt;NPM版本6.14.18 Windows推荐使用nvm - node version manager（node版本管理工具）。 12345C:\Users\user&gt;node -vv14.21.3C:\Users\user&gt;npm -v6.14.18  Quick Start Vue2项目搭建打开终端（Micro">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:\Users\17311\AppData\Roaming\marktext\images\2023-07-14-13-37-58-image.png">
+<meta property="og:image" content="c:\Users\17311\AppData\Roaming\marktext\images\2023-07-14-13-45-09-image.png">
+<meta property="og:image" content="c:\Users\17311\AppData\Roaming\marktext\images\2023-07-14-13-48-49-image.png">
+<meta property="og:image" content="c:\Users\17311\AppData\Roaming\marktext\images\2023-07-14-14-13-31-image.png">
+<meta property="og:image" content="c:\Users\17311\AppData\Roaming\marktext\images\2023-07-14-14-51-56-image.png">
+<meta property="article:published_time" content="2023-07-13T08:11:40.571Z">
+<meta property="article:modified_time" content="2023-07-14T08:16:21.356Z">
+<meta property="article:author" content="wxy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\17311\AppData\Roaming\marktext\images\2023-07-14-13-37-58-image.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Vue2学习进阶之路</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/wxpythonx">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2023/07/11/hello-world/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/07/13/Vue2/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/07/13/Vue2/&text=Vue2学习进阶之路"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/07/13/Vue2/&title=Vue2学习进阶之路"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/07/13/Vue2/&is_video=false&description=Vue2学习进阶之路"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vue2学习进阶之路&body=Check out this article: http://example.com/2023/07/13/Vue2/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/07/13/Vue2/&title=Vue2学习进阶之路"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/07/13/Vue2/&title=Vue2学习进阶之路"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/07/13/Vue2/&title=Vue2学习进阶之路"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/07/13/Vue2/&title=Vue2学习进阶之路"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/07/13/Vue2/&name=Vue2学习进阶之路&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/07/13/Vue2/&t=Vue2学习进阶之路"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue2%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA"><span class="toc-number">1.1.</span> <span class="toc-text">Vue2项目搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1%E5%92%8CNPM%E5%91%BD%E4%BB%A4"><span class="toc-number">1.2.</span> <span class="toc-text">运行服务和NPM命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue%E5%AE%9E%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">Vue实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">Vue常用组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3"><span class="toc-number">3.1.</span> <span class="toc-text">学习文档</span></a></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Vue2学习进阶之路
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">wxy</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-07-13T08:11:40.571Z" class="dt-published" itemprop="datePublished">2023-07-13</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p>操作系统Windows11&gt;Node.js版本14.21.3&gt;NPM版本6.14.18</p>
+<p>Windows推荐使用nvm - node version manager（node版本管理工具）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\user&gt;node -v</span><br><span class="line">v14.21.3</span><br><span class="line"></span><br><span class="line">C:\Users\user&gt;npm -v</span><br><span class="line">6.14.18</span><br></pre></td></tr></table></figure>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><hr>
+<h3 id="Vue2项目搭建"><a href="#Vue2项目搭建" class="headerlink" title="Vue2项目搭建"></a>Vue2项目搭建</h3><p>打开终端（<a target="_blank" rel="noopener" href="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=zh-cn&gl=cn">Microsoft Apps</a>）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#安装最新版本的脚手架</span><br><span class="line">npm install -g @vue/cli   </span><br><span class="line">#卸载脚手架</span><br><span class="line">npm uninstall -g @vue/cli</span><br></pre></td></tr></table></figure>
+
+<p>查看脚手架版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\user&gt;vue -V</span><br><span class="line">@vue/cli 5.0.8</span><br></pre></td></tr></table></figure>
+
+<p>开始创建项目</p>
+<ul>
+<li><p>命令行创建Vue项目</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#cd进入项目存放的目录</span><br><span class="line">#vue create（项目名）</span><br><span class="line">C:\Users\user&gt;d:</span><br><span class="line"></span><br><span class="line">D:\&gt;cd vue-workspace</span><br><span class="line"></span><br><span class="line">D:\vue-workspace&gt;vue create my-vue</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#选择第二个选项创建Vue2项目，然后回车</span><br><span class="line">Vue CLI v5.0.8</span><br><span class="line">? Please pick a preset: (Use arrow keys)</span><br><span class="line">  Default ([Vue 3] babel, eslint)</span><br><span class="line">&gt; Default ([Vue 2] babel, eslint)</span><br><span class="line">  Manually select features</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#等待一段时间后项目自动搭建完成</span><br><span class="line">Vue CLI v5.0.8</span><br><span class="line">? Please pick a preset: Default ([Vue 2] babel, eslint)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Vue CLI v5.0.8</span><br><span class="line">✨  Creating project in D:\vue-workspace\my-vue.</span><br><span class="line">🗃  Initializing git repository...</span><br><span class="line">⚙️  Installing CLI plugins. This might take a while...</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; yorkie@2.0.0 install D:\vue-workspace\my-vue\node_modules\yorkie</span><br><span class="line">&gt; node bin/install.js</span><br><span class="line"></span><br><span class="line">setting up Git hooks</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; core-js@3.31.1 postinstall D:\vue-workspace\my-vue\node_modules\core-js</span><br><span class="line">&gt; node -e &quot;try&#123;require(&#x27;./postinstall&#x27;)&#125;catch(e)&#123;&#125;&quot;</span><br><span class="line"></span><br><span class="line">added 864 packages from 463 contributors in 29.42s</span><br><span class="line"></span><br><span class="line">94 packages are looking for funding</span><br><span class="line">  run `npm fund` for details</span><br><span class="line"></span><br><span class="line">🚀  Invoking generators...</span><br><span class="line">📦  Installing additional dependencies...</span><br><span class="line"></span><br><span class="line">added 91 packages from 63 contributors in 7.416s</span><br><span class="line"></span><br><span class="line">107 packages are looking for funding</span><br><span class="line">  run `npm fund` for details</span><br><span class="line"></span><br><span class="line">⚓  Running completion hooks...</span><br><span class="line"></span><br><span class="line">📄  Generating README.md...</span><br><span class="line"></span><br><span class="line">🎉  Successfully created project my-vue.</span><br><span class="line">👉  Get started with the following commands:</span><br><span class="line"></span><br><span class="line"> $ cd my-vue</span><br><span class="line"> $ npm run serve</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Vue UI界面创建Vue项目</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\17311&gt;vue ui</span><br><span class="line">🚀  Starting GUI...</span><br><span class="line">🌠  Ready on http://localhost:8000</span><br></pre></td></tr></table></figure>
+
+<p>浏览器打开 <a target="_blank" rel="noopener" href="http://localhost/">http://localhost:8000</a></p>
+<p><img src="C:\Users\17311\AppData\Roaming\marktext\images\2023-07-14-13-37-58-image.png"></p>
+<p>点击创建，进入项目存放的目录，点击下方的在此创建新项目。</p>
+<ul>
+<li><p>项目详情</p>
+<p><img src="C:\Users\17311\AppData\Roaming\marktext\images\2023-07-14-13-45-09-image.png"></p>
+</li>
+<li><p>预设（选择默认Vue2项目或手动配置自己所需要的项目样式）</p>
+<p>功能和配置是手动配置需要设置的，之后用到再更新。</p>
+</li>
+</ul>
+<p>创建项目，等待完成。</p>
+</li>
+</ul>
+<p>项目创建完成后，进入项目文件夹，目录结构如下：</p>
+<p><img src="C:\Users\17311\AppData\Roaming\marktext\images\2023-07-14-13-48-49-image.png"></p>
+<hr>
+<h3 id="运行服务和NPM命令"><a href="#运行服务和NPM命令" class="headerlink" title="运行服务和NPM命令"></a>运行服务和NPM命令</h3><p>市面上主流前端IDE工具有VSCode、JetBrains的WebStorm、Sublime Text（实际上并不是一种IDE，而是一个轻量级的、速度飞快的用于编程的文本编辑器。对于JavaScript的爱好者和新手开发者来说，它是一个很好的选择。）等，各有各的优点。VSCode胜在免费、轻量级，用过JetBrains其他IDE的会更习惯WebStorm的界面操作。</p>
+<p>使用IDE打开Vue2项目</p>
+<p><img src="C:\Users\17311\AppData\Roaming\marktext\images\2023-07-14-14-13-31-image.png"></p>
+<p>可以看到Vue原生支持四条npm命令：</p>
+<ol>
+<li><p>npm install</p>
+<p>npm作为包管理器，在Vue2项目中根目录下的package.json文件记录项目中所需要的所有包、版本、配置信息，install的所有包在node_modules文件夹下。</p>
+<p>创建Vue2项目时，默认的package.json文件已经配置好了基本所需的包，而且已经install过了，因此可以直接启动项目，不需要再跑一遍npm install。</p>
+<p>如果是从别的地方copy或者clone来的vue项目，因为node_modules文件夹体积过大的原因，基本上copy或者clone的Vue项目中是不会含有node_modules文件夹的，这个时候就需要在cmd中运行npm install命令，下载package.json文件中的包生成node_modules文件夹。</p>
+</li>
+<li><p>npm run serve</p>
+<p>运行Vue项目的命令，等同于vue-cli-service serve，可以在package.json文件中看到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;serve&quot;: &quot;vue-cli-service serve&quot;,</span><br><span class="line">  &quot;build&quot;: &quot;vue-cli-service build&quot;,</span><br><span class="line">  &quot;lint&quot;: &quot;vue-cli-service lint&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>npm脚本名称可以由服务所有者自定义，在这里”serve”改成自定义名称例如”dev”，那么就运行npm run dev，最终执行的都是相同的命令”npm run vue-cli-service serve”。</p>
+<p>尝试启动服务，打开终端，在项目的路径下执行npm run serve：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">D:\vue-workspace\my-vue&gt; npm run serve</span><br><span class="line"></span><br><span class="line">&gt; my-vue@0.1.0 serve D:\vue-workspace\my-vue</span><br><span class="line">&gt; vue-cli-service serve</span><br><span class="line"></span><br><span class="line"> INFO  Starting development server...</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> DONE  Compiled successfully in 5293ms                                                                                                                                          14:18:03</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  App running at:</span><br><span class="line">  - Local:   http://localhost:8080/ </span><br><span class="line">  - Network: http://192.168.X.XXX:8080/</span><br><span class="line"></span><br><span class="line">  Note that the development build is not optimized.</span><br><span class="line">  To create a production build, run npm run build.</span><br></pre></td></tr></table></figure>
+
+<p>项目正常启动，浏览器打开就是Vue2的初始默认页面：</p>
+<p><img src="C:\Users\17311\AppData\Roaming\marktext\images\2023-07-14-14-51-56-image.png"></p>
+<p>停止服务在终端用CTRL+C即可。</p>
+</li>
+<li><p>npm run build</p>
+<p>打包命令，执行后生成的dist文件夹（默认dist，可以在配置中修改名称）中，运行index.html页面就可以像打开静态网页一样打开Vue的项目。</p>
+</li>
+<li><p>npm run lint</p>
+<p>静态分析所有在 <code>src/</code> 和 <code>test/</code> 下面的 JS 以及 Vue 组件文件。</p>
+</li>
+</ol>
+<hr>
+<h2 id="Vue实例"><a href="#Vue实例" class="headerlink" title="Vue实例"></a>Vue实例</h2><hr>
+<h2 id="Vue常用组件"><a href="#Vue常用组件" class="headerlink" title="Vue常用组件"></a>Vue常用组件</h2><hr>
+<h3 id="学习文档"><a href="#学习文档" class="headerlink" title="学习文档"></a>学习文档</h3><ol>
+<li><p><a target="_blank" rel="noopener" href="https://v2.cn.vuejs.org/v2/guide/">Vue2.js</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://element.eleme.cn/#/zh-CN">Element - The world’s most popular Vue UI framework</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://router.vuejs.org/">官方路由Vue Router</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/">Vuex 是什么？ | Vuex</a></p>
+</li>
+</ol>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/wxpythonx">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue2%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA"><span class="toc-number">1.1.</span> <span class="toc-text">Vue2项目搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1%E5%92%8CNPM%E5%91%BD%E4%BB%A4"><span class="toc-number">1.2.</span> <span class="toc-text">运行服务和NPM命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue%E5%AE%9E%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">Vue实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">Vue常用组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3"><span class="toc-number">3.1.</span> <span class="toc-text">学习文档</span></a></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/07/13/Vue2/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/07/13/Vue2/&text=Vue2学习进阶之路"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/07/13/Vue2/&title=Vue2学习进阶之路"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/07/13/Vue2/&is_video=false&description=Vue2学习进阶之路"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vue2学习进阶之路&body=Check out this article: http://example.com/2023/07/13/Vue2/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/07/13/Vue2/&title=Vue2学习进阶之路"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/07/13/Vue2/&title=Vue2学习进阶之路"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/07/13/Vue2/&title=Vue2学习进阶之路"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/07/13/Vue2/&title=Vue2学习进阶之路"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/07/13/Vue2/&name=Vue2学习进阶之路&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/07/13/Vue2/&t=Vue2学习进阶之路"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2023
+    wxy
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/wxpythonx">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
